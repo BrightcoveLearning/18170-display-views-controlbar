@@ -8,7 +8,7 @@
 
 <body>
 
-  <video id="myPlayerID"
+  <video-js id="myPlayerID"
     data-video-id="3851380732001"
     data-account="1752604059001"
     data-player="HkAzSmB0l"
@@ -16,11 +16,11 @@
     data-application-id
     class="video-js"
     controls
-    width="640" height="360"></video>
-  <script src="//players.brightcove.net/1752604059001/HkAzSmB0l_default/index.min.js"></script>
+    width="640" height="360"></video-js>
+  <script src="https://players.brightcove.net/1752604059001/HkAzSmB0l_default/index.min.js"></script>
 
   <script type="text/javascript">
-    videojs('myPlayerID').ready(function () {
+    videojs.getPlayer('myPlayerID').ready(function() {
       var myPlayer = this,
         viewsObject = [];
 
@@ -107,7 +107,7 @@
           // open and send request
           httpRequest.send(JSON.stringify(options));
         }
-        
+
         // +++ Build and place count in controlbar +++
         /**
          * Dynamically build a div that is then
